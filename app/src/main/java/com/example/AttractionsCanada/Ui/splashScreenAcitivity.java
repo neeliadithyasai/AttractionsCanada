@@ -1,4 +1,4 @@
-package com.example.countrylistrecyclerview.Ui;
+package com.example.AttractionsCanada.Ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,18 +1,21 @@
-package com.example.countrylistrecyclerview.adapters;
+package com.example.AttractionsCanada.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.countrylistrecyclerview.CanadaAttraction;
+import com.example.AttractionsCanada.CanadaAttraction;
+import com.example.AttractionsCanada.Ui.AttractionDetailsActivity;
 import com.example.countrylistrecyclerview.R;
 
 import java.util.ArrayList;
@@ -42,7 +45,7 @@ public class placesAdapter extends RecyclerView.Adapter<placesAdapter.CountryVie
     }
 
     @Override
-    public void onBindViewHolder(@NonNull placesAdapter.CountryViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull final placesAdapter.CountryViewHolder holder, final int position)
     {
 
         CanadaAttraction mCanadaAttraction = this.canadaAttractionArrayList.get(position);
@@ -57,8 +60,14 @@ public class placesAdapter extends RecyclerView.Adapter<placesAdapter.CountryVie
             @Override
             public void onClick(View v)
             {
+                CanadaAttraction c = canadaAttractionArrayList.get(position);
+                Toast.makeText(holder.itemView.getContext(), "C : " + c.getPlaceName(), Toast.LENGTH_SHORT).show();
+                Log.d("CLICK", "hello");
 
-                Log.d("CLICK", "Hello ");
+                Intent mIntent = new Intent(holder.itemView.getContext(), AttractionDetailsActivity.class);
+                mIntent.putExtra("object",c);
+                holder.itemView.getContext().startActivity(mIntent);
+
 
             }
         });

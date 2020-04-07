@@ -1,18 +1,16 @@
-package com.example.countrylistrecyclerview.Ui;
+package com.example.AttractionsCanada.Ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.util.Log;
 
-import com.example.countrylistrecyclerview.CanadaAttraction;
+import com.example.AttractionsCanada.adapters.placesAdapter;
+import com.example.AttractionsCanada.CanadaAttraction;
 import com.example.countrylistrecyclerview.R;
-import com.example.countrylistrecyclerview.adapters.placesAdapter;
 
 import java.util.ArrayList;
-import java.util.Dictionary;
 
 public class AttractionListActivity extends AppCompatActivity {
 
@@ -20,7 +18,7 @@ public class AttractionListActivity extends AppCompatActivity {
     private ArrayList<CanadaAttraction> Places;
     private ArrayList<String> mImageUrls = new ArrayList<>();
 
-    private placesAdapter placesAdapter;
+    private com.example.AttractionsCanada.adapters.placesAdapter placesAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -85,34 +83,34 @@ public class AttractionListActivity extends AppCompatActivity {
     private void populateCountries()
     {
         Places = new ArrayList<>();
-        Places.add(new CanadaAttraction(1,"CN Tower","290 Bremner Blvd,M5V 3L9","Toronto","Ontario",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(1,"CN Tower","290 Bremner Blvd,M5V 3L9","Toronto","Ontario",getString(R.string.cntower)));
 
-        Places.add(new CanadaAttraction(2,"Niagara Falls","6650 Niagara Parkway. (River Rd) Niagara Falls L2G 0L0","Niagara Falls","Ontario",R.drawable.ad,getString(R.string.Niagra)));
+        Places.add(new CanadaAttraction(2,"Niagara Falls","6650 Niagara Parkway. (River Rd) Niagara Falls L2G 0L0","Niagara Falls","Ontario",getString(R.string.Niagra)));
 
-        Places.add(new CanadaAttraction(3,"Banff National Park & the Rocky Mountains","Improvement District No. 9, AB T0L","Alberta","Alberta",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(3,"Banff National Park & the Rocky Mountains","Improvement District No. 9, AB T0L","Alberta","Alberta",getString(R.string.banff)));
 
-        Places.add(new CanadaAttraction(4,"Old Quebec (Vieux-Quebec)","Rue de Tresor, GIR 5B8","Quebec City","Quebec",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(4,"Old Quebec (Vieux-Quebec)","Rue de Tresor, GIR 5B8","Quebec City","Quebec",getString(R.string.OldQubec)));
 
-        Places.add(new CanadaAttraction(5,"Whistler","British Columbia","British Columbia","British Columbia",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(5,"Whistler","British Columbia","British Columbia","British Columbia",getString(R.string.whistler)));
 
-        Places.add(new CanadaAttraction(6,"Ottawa's Parliament Hill","Wellington St, K1A 0A9","Ottawa","Ontario",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(6,"Ottawa's Parliament Hill","Wellington St, K1A 0A9","Ottawa","Ontario",getString(R.string.ottawasparliment)));
 
-        Places.add(new CanadaAttraction(7,"St. John's Signal Hill National Historic Site","230 Signal Hill Rd, St. John's, NL A1A 1B3","St. John's","Newfoundland and Labrador",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(7,"St. John's Signal Hill National Historic Site","230 Signal Hill Rd, St. John's, NL A1A 1B3","St. John's","Newfoundland and Labrador",getString(R.string.stjohnsSignal)));
 
-        Places.add(new CanadaAttraction(8,"Old Montreal","Old Montreal","Montreal","Quebec",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(8,"Old Montreal","Old Montreal","Montreal","Quebec",getString(R.string.oldmontreal)));
 
-        Places.add(new CanadaAttraction(9,"Polar Bears of Churchill","town of Churchill in Northern Manitoba.","Manitoba","Manitoba",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(9,"Polar Bears of Churchill","town of Churchill in Northern Manitoba.","Manitoba","Manitoba",getString(R.string.polarbear)));
 
-        Places.add(new CanadaAttraction(10,"Vancouver Island","Vancouver","Vancouver","British Columbia",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(10,"Vancouver Island","Vancouver","Vancouver","British Columbia",getString(R.string.vancouverisland)));
 
-        Places.add(new CanadaAttraction(11,"Bay of Fundy","New Brunswick, Nova Scotia, Maine","Nova Scotia and New Brunswick","Nova Scotia and New Brunswick",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(11,"Bay of Fundy","New Brunswick, Nova Scotia, Maine","Nova Scotia and New Brunswick","Nova Scotia and New Brunswick",getString(R.string.bayoffundy)));
 
-        Places.add(new CanadaAttraction(12,"Victoria's Inner Harbour","Victoria, British Columbia","British Columbia","British Columbia",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(12,"Victoria's Inner Harbour","Victoria, British Columbia","British Columbia","British Columbia",getString(R.string.victoriainnerharbour)));
 
-        Places.add(new CanadaAttraction(13,"Gros Morne National Park","Newfoundland and Labrador","Newfoundland and Labrador","Newfoundland and Labrador",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(13,"Gros Morne National Park","Newfoundland and Labrador","Newfoundland and Labrador","Newfoundland and Labrador",getString(R.string.GrosMonre)));
 
-        Places.add(new CanadaAttraction(14,"Vancouver's Stanley Park","Vancouver, BC V6G 1Z4","Vancouver","British Columbia",R.drawable.ad,"Desc"));
-        Places.add(new CanadaAttraction(15,"Calgary Stampede","1410 Olympic Way SE, Calgary, AB T2G 2W1","Calgary","Alberta",R.drawable.ad,"Desc"));
+        Places.add(new CanadaAttraction(14,"Vancouver's Stanley Park","Vancouver, BC V6G 1Z4","Vancouver","British Columbia",getString(R.string.vancouvernationalpark)));
+        Places.add(new CanadaAttraction(15,"Calgary Stampede","1410 Olympic Way SE, Calgary, AB T2G 2W1","Calgary","Alberta",getString(R.string.clagary)));
 
 
 

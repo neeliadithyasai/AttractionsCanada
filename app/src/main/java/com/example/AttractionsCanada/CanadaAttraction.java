@@ -1,13 +1,14 @@
-package com.example.countrylistrecyclerview;
+package com.example.AttractionsCanada;
 
-public class CanadaAttraction {
+import java.io.Serializable;
+
+public class CanadaAttraction implements Serializable {
 
     private int placeId;
     private String placeName;
     private String address;
     private String City;
     private String province;
-    private int placeImage;
     private String description;
 
 
@@ -15,13 +16,12 @@ public class CanadaAttraction {
     }
 
 
-    public CanadaAttraction(int placeId, String placeName, String address, String city, String province, int placeImage, String description) {
+    public CanadaAttraction(int placeId, String placeName, String address, String city, String province, String description) {
         this.placeId = placeId;
         this.placeName = placeName;
         this.address = address;
         this.City = city;
         this.province = province;
-        this.placeImage = placeImage;
         this.description = description;
     }
 
@@ -63,14 +63,6 @@ public class CanadaAttraction {
 
     public void setProvince(String province) {
         this.province = province;
-    }
-
-    public int getPlaceImage() {
-        return placeImage;
-    }
-
-    public void setPlaceImage(int placeImage) {
-        this.placeImage = placeImage;
     }
 
     public String getDescription() {
