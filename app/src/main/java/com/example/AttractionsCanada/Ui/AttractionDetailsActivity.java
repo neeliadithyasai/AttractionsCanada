@@ -24,8 +24,8 @@ public class AttractionDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
 
-        CanadaAttraction C2 = (CanadaAttraction) extras.getSerializable("object");
+        CanadaAttraction place = (CanadaAttraction) extras.getSerializable("object");
 
-        showDetails.setText(C2.getPlaceName()+"\n"+C2.getDescription());
+        showDetails.setText(place.getPlaceId()+")"+place.getPlaceName()+"\nAddress: "+place.getAddress()+"\nCity: "+place.getCity()+"\nProvince: "+place.getProvince()+"\nDescripition:\n"+place.getDescription());
     }
 }
